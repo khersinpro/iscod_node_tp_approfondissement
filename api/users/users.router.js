@@ -8,6 +8,6 @@ router.get("/:id", authMiddleware, usersController.getById);
 router.post("/", usersController.create);
 router.put("/:id", authMiddleware, usersController.update);
 router.delete("/:id", authMiddleware, usersController.delete);
-router.get('/:id/articles', authMiddleware, usersController.getAllArticlesFromUser);
+router.get('/:id/articles', usersController.getAllArticlesFromUser);
 
 module.exports = router;
